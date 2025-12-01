@@ -2,6 +2,7 @@ const heart = document.getElementById("heart");
 const tomato = document.getElementById("tomato");
 const star = document.getElementById("star")
 const clock = document.getElementById("countdown");
+const filters = document.getElementById("filters");
 
 
 window.onload = () => {
@@ -9,6 +10,12 @@ window.onload = () => {
         timer();
     }
 }
+
+filters.addEventListener("click", () => {
+    console.log("filters")
+    var filterlist = document.getElementById("filterlist");
+    filterlist.classList.toggle("filter-list")
+})
 
 heart.addEventListener("click", () => {
     console.log("heart")
@@ -40,7 +47,6 @@ function timer() {
         clock.textContent = "je was op niks aan het wachten"
     }
 }
-
 
 function timeFormat(seconds) {
     // uitrekenen hoeveel uren minuten en seconden er moeten zijn
