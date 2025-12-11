@@ -1015,7 +1015,7 @@ section.filter-menu {
 
 .sparkle {
     animation-name: sparkle;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -1095,7 +1095,7 @@ section.filter-menu {
 
 .love {
     animation-name: love;
-    animation-duration: 4s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: 1;

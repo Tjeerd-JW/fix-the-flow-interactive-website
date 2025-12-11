@@ -1,22 +1,27 @@
-const heart = document.getElementById("heart");
-const tomato = document.getElementById("tomato");
-const star = document.getElementById("star");
+let heart = document.getElementById("heart");
+var heartLove = document.getElementById("heart-love");
+let tomato = document.getElementById("tomato");
+var tomatoThrow = document.getElementById("tomato-throw");
+let star = document.getElementById("star");
+var starSparkle = document.getElementById("star-sparkle");
 
+heart.addEventListener("click", heartHandler)
+heartLove.addEventListener("animationend", heartHandler)
 
-heart.addEventListener("click", () => {
-    console.log("heart")
-    var element = document.getElementById("heart-love");
-    element.classList.toggle("love");
-})
+function heartHandler() {
+    heartLove.classList.toggle("love");
+}
 
-tomato.addEventListener("click", () => {
-    console.log("tomato")
-    var element = document.getElementById("tomato-throw");
-    element.classList.toggle("throw");
-})
+tomato.addEventListener("click", tomatoHandler)
+tomatoThrow.addEventListener("animationend", tomatoHandler)
 
-star.addEventListener("click", () => {
-    console.log("star")
-    var element = document.getElementById("star-sparkle");
-    element.classList.toggle("sparkle");
-})
+function tomatoHandler() {
+    tomatoThrow.classList.toggle("throw");
+}
+
+star.addEventListener("click", starHandler)
+starSparkle.addEventListener("animationend", starHandler)
+
+function starHandler() {
+    starSparkle.classList.toggle("sparkle");
+}
