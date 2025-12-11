@@ -1,6 +1,4 @@
-const heart = document.getElementById("heart");
-const tomato = document.getElementById("tomato");
-const star = document.getElementById("star");
+
 const clock = document.getElementById("countdown");
 const filters = document.getElementById("filters");
 
@@ -16,23 +14,6 @@ filters.addEventListener("click", () => {
     document.getElementById("filterMenu").classList.toggle("filters-open");
 })
 
-heart.addEventListener("click", () => {
-    console.log("heart")
-    var element = document.getElementById("heart-love");
-    element.classList.toggle("love");
-})
-
-tomato.addEventListener("click", () => {
-    console.log("tomato")
-    var element = document.getElementById("tomato-throw");
-    element.classList.toggle("throw");
-})
-
-star.addEventListener("click", () => {
-    console.log("star")
-    var element = document.getElementById("star-sparkle");
-    element.classList.toggle("sparkle");
-})
 
 function timer() {
     console.log("coutdown started")

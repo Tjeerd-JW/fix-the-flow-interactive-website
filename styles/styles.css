@@ -566,8 +566,9 @@ main {
                 display: flex;
                 flex-direction: column;
             }
-            .text input{
-                width: unset;                
+
+            .text input {
+                width: unset;
             }
 
             button {
@@ -623,13 +624,19 @@ main {
             }
         }
 
-        ul {
+        form {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             list-style: none;
+            width: 100%;
 
-            li {
+            label {
                 text-align: center;
+                z-index: 100;
+
+                input {
+                    display: none;
+                }
 
                 svg {
                     &:hover {
@@ -645,7 +652,15 @@ main {
                 }
             }
 
-            li:first-child {
+
+
+            label:first-child {
+                &:has([value="tomato"]:checked) svg {
+                    path {
+                        fill: var(--alert-light);
+                    }
+                }
+
                 svg {
                     &:hover {
                         path {
@@ -655,7 +670,14 @@ main {
                 }
             }
 
-            li:nth-child(2) {
+            label:nth-child(2) {
+                &:has([value="star"]:checked) svg {
+                    path {
+                            fill: #fcdf03;
+                        
+                    }
+                }
+
                 svg {
                     &:hover {
 
@@ -667,11 +689,17 @@ main {
                 }
             }
 
-            li:last-child {
+            label:last-child {
+                &:has([value="heart"]:checked) svg {
+                    path {
+                        fill: var(--alert-light);
+                    }
+                }
+
                 svg {
                     &:hover {
                         path {
-                            fill: var(--accent-light);
+                            fill: var(--alert-light);
                         }
                     }
                 }
@@ -679,6 +707,7 @@ main {
 
         }
     }
+
 }
 
 /* profile page */
