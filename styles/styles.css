@@ -586,6 +586,7 @@ main {
 /* post page */
 .post-main {
     overflow: hidden;
+    height: 90vh;
 
     h2 {
         align-items: center;
@@ -1006,23 +1007,66 @@ section.filter-menu {
     }
 }
 
+@keyframes trail {
+    0% {
+        opacity: 1;
+        transform: rotate(20deg);
+    }
+
+    1% {
+        transform-origin: bottom right;
+        transform: translateX(-100vw) translateY(-100vh);
+    }
+
+    100% {
+        transform: rotate(50deg) translateX(10vw) translateY(10vh);
+        height: 100px;
+        width: 400px;
+        opacity: 1;
+        margin-left: 9.5rem;
+        margin-bottom: 3.5rem;
+
+    }
+}
+
 .star-sparkle {
     position: absolute;
     bottom: 0%;
     right: 0%;
     opacity: 0;
+    overflow: hidden;
 }
 
 .sparkle {
     animation-name: sparkle;
-    animation-duration: 3s;
+    animation-duration: 10s;
     animation-timing-function: linear;
-    animation-delay: 0s;
     animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: none;
+    z-index: 1000;
 }
 
+.rainbow {
+    overflow: hidden;
+
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    opacity: 0;
+    background: linear-gradient(to bottom, #ff3232 0%,#fc8600 13%,#f9ed00 31%,#0cf700 46%,#00c5f7 65%,#0004f9 80%,#a900f7 100%);
+    width: 250px;
+    height: 10px;
+    transform: rotate(90deg);
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+}
+
+.trail {
+    animation-name: trail;
+    animation-duration: 9.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transform-origin: bottom right;
+}
 
 /* heart animation */
 

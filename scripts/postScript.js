@@ -1,9 +1,10 @@
 let heart = document.getElementById("heart");
-var heartLove = document.getElementById("heart-love");
+let heartLove = document.getElementById("heart-love");
 let tomato = document.getElementById("tomato");
-var tomatoThrow = document.getElementById("tomato-throw");
+let tomatoThrow = document.getElementById("tomato-throw");
 let star = document.getElementById("star");
-var starSparkle = document.getElementById("star-sparkle");
+let starSparkle = document.getElementById("star-sparkle");
+let starTrail = document.querySelector('.rainbow');
 
 heart.addEventListener("click", heartHandler)
 heart.addEventListener("animationend", heartHandler)
@@ -23,5 +24,7 @@ star.addEventListener("click", starHandler)
 starSparkle.addEventListener("animationend", starHandler)
 
 function starHandler() {
+    console.log('ster')
     starSparkle.classList.toggle("sparkle");
+    starTrail.classList.toggle("trail")
 }
