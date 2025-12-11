@@ -6,10 +6,10 @@ let star = document.getElementById("star");
 var starSparkle = document.getElementById("star-sparkle");
 
 heart.addEventListener("click", heartHandler)
-heartLove.addEventListener("animationend", heartHandler)
+heart.addEventListener("animationend", heartHandler)
 
 function heartHandler() {
-    heartLove.classList.toggle("love");
+    heart.classList.toggle("love");
 }
 
 tomato.addEventListener("click", tomatoHandler)

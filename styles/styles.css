@@ -673,8 +673,8 @@ main {
             label:nth-child(2) {
                 &:has([value="star"]:checked) svg {
                     path {
-                            fill: #fcdf03;
-                        
+                        fill: #fcdf03;
+
                     }
                 }
 
@@ -1027,58 +1027,29 @@ section.filter-menu {
 /* heart animation */
 
 @keyframes love {
-    0% {
-        transform: translateX(100vw) rotateY(30deg) scale(6.5);
-        transform-origin: -100% 50%;
-        opacity: 0;
-    }
-
     20% {
-        background-color: transparent;
-
+        transform: rotate(-15deg) translateY(-5rem);
     }
 
     30% {
-        transform: translateX(0) rotateY(0) scale(1);
-        transform-origin: 600px 50%;
-        opacity: 1;
-
-    }
-
-    31% {
-        transform-origin: 50% 50%;
+        transform: rotate(-15deg)translateY(-5rem) scale(3);
     }
 
     40% {
-        transform: scale(3);
+        transform: rotate(-15deg)translateY(-5rem) scale(2);
     }
 
     50% {
-        transform: scale(2);
+        transform: rotate(-15deg) translateY(-5rem)scale(3);
     }
-
 
     60% {
-        transform: scale(3);
-    }
-
-    70% {
-        transform: scale(1);
-    }
-
-    80% {
-        background-color: transparent;
-
-        transform: translateX(0) rotate(0deg);
-    }
-
-    99% {
-        opacity: 1;
+        transform: rotate(-15deg) translateY(-5rem)scale(1);
     }
 
     100% {
-        transform: translateX(100vw) rotate(540deg);
-        opacity: 0;
+        transform: translateY(0);
+
     }
 }
 
