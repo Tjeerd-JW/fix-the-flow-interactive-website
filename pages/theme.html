@@ -76,11 +76,38 @@
                     </svg>
                 </button>
                 <article id="filterlist">
-                    <ul>
-                        <li>test</li>
-                        <li>test 2</li>
-                        <li>test 3</li>
-                    </ul>
+                    <form action="">
+                        <label class="text" for="">
+                            Tags
+                            <input type="text" list="tags">
+                        </label>
+                        <datalist id="tags">
+                            <option value="Fun"></option>
+                            <option value="Kunst"></option>
+                            <option value="Herfst"></option>
+                        </datalist>
+
+                        <label class="text" for="">
+                            Auteur
+                            <input type="text" list="author">
+                        </label>
+                        <datalist id="author">
+                            <option value="Chris Walker"></option>
+                            <option value="Richard Trager"></option>
+                            <option value="Waylon Park"></option>
+                        </datalist>
+                        <label class="text" for="">
+                            Locatie
+                            <input type="text" list="location">
+                        </label>
+                        <datalist id="location">
+                            <option value="Amsterdam"></option>
+                            <option value="Alkmaar"></option>
+                            <option value="Haarlem"></option>
+                            <option value="Rotterdam"></option>
+                        </datalist>
+                        <button class="btn">Filteren</button>
+                    </form>
                 </article>
             </section>
 
