@@ -1042,7 +1042,7 @@ section.filter-menu {
 
 .sparkle {
     animation-name: sparkle;
-    animation-duration: 10s;
+    animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     z-index: 1000;
@@ -1050,7 +1050,6 @@ section.filter-menu {
 
 .rainbow {
     overflow: hidden;
-
     position: absolute;
     bottom: 0%;
     right: 0%;
@@ -1065,7 +1064,7 @@ section.filter-menu {
 
 .trail {
     animation-name: trail;
-    animation-duration: 9.5s;
+    animation-duration: 1.9s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     transform-origin: bottom right;
