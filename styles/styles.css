@@ -582,11 +582,19 @@ main {
         flex-direction: column;
         transition: .3s ease-in-out;
         margin: unset;
+        width: 100%;
 
         li {
             display: flex;
             flex-direction: row-reverse;
             gap: 2rem;
+            border: 1px solid var(--primary-bg-light);
+            border-right: 0;
+            border-left: 0;
+            width: 100%;
+            border-bottom: 0;
+            padding: .5rem;
+            justify-content: left;
 
             article {
                 display: flex;
@@ -604,9 +612,12 @@ main {
                 }
             }
 
-            a img {
-                width: clamp(100px, 33vw, 250px);
-                object-fit: cover;
+            a {
+
+                img {
+                    width: clamp(100px, 33vw, 250px);
+                    object-fit: cover;
+                }
             }
         }
     }
