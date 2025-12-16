@@ -1,6 +1,6 @@
-
 const clock = document.getElementById("countdown");
 const filters = document.getElementById("filters");
+const gridButton = document.querySelector('.theme-main header button')
 
 
 window.onload = () => {
@@ -40,4 +40,14 @@ function timeFormat(seconds) {
     const s = String(secs).padStart(2, "0");
 
     return `${h}:${m}:${s}`
+}
+
+gridButton.addEventListener("click", gridHandler)
+
+function gridHandler(){
+    let snaps = document.querySelectorAll('.theme-main ul li')
+    let snapList = document.querySelector('.theme-main ul')
+console.log('list of grid?')
+
+snapList.classList.toggle('snaplist')
 }
