@@ -678,15 +678,19 @@ main {
             }
         }
 
-        form {
+        section {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             list-style: none;
             width: 100%;
 
-            label {
+            button {
                 text-align: center;
                 z-index: 100;
+                width: min-content;
+                margin: auto;
+                border: none;
+                background-color: transparent;
 
                 input {
                     display: none;
@@ -710,64 +714,38 @@ main {
                 }
             }
 
-            label:first-child {
-                &:has([value="tomato"]:checked) svg {
-                    path {
+            button:first-child {
+                &:hover {
+                    svg path {
                         fill: var(--alert-light);
-                    }
-                }
-
-                svg {
-                    &:hover {
-                        path {
-                            fill: var(--alert-light);
-                        }
                     }
                 }
             }
 
-            label:nth-child(2) {
-                &:has([value="star"]:checked) svg {
-                    path {
+            button:nth-child(2) {
+                &:hover {
+                    svg path {
+                        /* moet nog in de styleguide */
                         fill: #fcdf03;
-
-                    }
-                }
-
-                svg {
-                    &:hover {
-
-                        path {
-                            /* moet nog in de styleguide */
-                            fill: #fcdf03;
-                        }
                     }
                 }
             }
 
-            label:last-child {
-                &:has([value="heart"]:checked) svg {
-                    path {
+            button:last-child {
+                &:hover {
+                    svg path {
                         fill: var(--alert-light);
                     }
                 }
-
-                svg {
-                    &:hover {
-                        path {
-                            fill: var(--alert-light);
-                        }
-                    }
-                }
             }
 
-            &:has([value="heart"]:checked) label:first-child svg path {
-                fill: var(--nav-neutral);
-
+            .red path {
+                fill: var(--alert-light);
             }
 
-            &:has([value="tomato"]:checked) label:last-child svg path {
-                fill: var(--nav-neutral);
+            .yellow path {
+                fill: #fcdf03;
+
             }
         }
     }
